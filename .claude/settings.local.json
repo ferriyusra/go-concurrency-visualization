@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(npx shadcn@latest add alert-dialog:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(test:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 90s npm run build:*)",
+      "Bash(find:*)",
+      "Bash(npm run dev:*)",
+      "Bash(dir:*)",
+      "Bash(wc -l /Users/ferri/Documents/dev/learning/fullstack/go-concurrency-cinema-simulator/src/**/*.ts /Users/ferri/Documents/dev/learning/fullstack/go-concurrency-cinema-simulator/src/**/*.tsx)",
+      "Bash(ls -la \"/Users/ferri/Documents/dev/learning/fullstack/go-concurrency-cinema-simulator/src/app/\\(auth\\)/\")",
+      "Read(//Users/ferri/Documents/dev/learning/fullstack/**)",
+      "Bash(ls /Users/ferri/Documents/dev/learning/fullstack/go-concurrency-cinema-simulator/src/app/\\\\\\(dashboard\\\\\\)/)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

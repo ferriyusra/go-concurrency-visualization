@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(go:*)",
+      "Bash(shasum:*)",
+      "Bash(ls -la:*)",
+      "Bash(mkdir:*)",
+      "Bash(mkdir -p .claude/docs)",
+      // "Bash(git clone git@bitbucket.org:my-repo/common-setup.git .claude/temp/common-setup)",
+      // "Bash(cp .claude/temp/common-setup/CONTRIBUTING.md .claude/docs/CONTRIBUTING.md)",
+      "Bash(rm -rf .claude/temp)",
+      // "Bash(./.claude/scripts/update-openapi.sh:*)",
+      "Bash(jq:*)",
+      "Bash(osv-scanner:*)"
+    ],
+    "deny": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/read_hook.js"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./.claude/hooks/update-openapi-hook.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
