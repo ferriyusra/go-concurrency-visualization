@@ -1,4 +1,4 @@
-# Go Concurrency Cinema Simulator — Technical Documentation
+# Go Concurrency Visualization — Technical Documentation
 
 An interactive educational platform that teaches Go concurrency patterns through real-time cinema ticket booking simulations. Users watch hundreds of goroutines compete for seats, comparing unsafe (no-lock), mutex-based, and lock-free (atomic/CAS) strategies side by side.
 

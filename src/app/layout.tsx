@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'Go Concurrency Cinema Simulator',
-	description: 'Learn Go concurrency patterns through interactive cinema simulations',
+	title: 'Go Concurrency Visualization',
+	description:
+		'Learn Go concurrency patterns through interactive cinema simulations',
 };
 
 export default function RootLayout({
@@ -23,8 +24,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+		<html lang='en' suppressHydrationWarning>
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
 				{children}
 			</body>
 		</html>
